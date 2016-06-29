@@ -3,6 +3,8 @@ Users are welcome to clone this repository to have access to up-to-date versions
 If you have an improved version of one of our tools, feel free to make a branch with your changes
 and submit a pull request.
 
+Current contact: Josh Laughner (jlaughner-AT-berkeley-DOT-edu)
+
 Tools included:
   get_BEHR.sh - a Bash script that can be run on a user's computer to download BEHR files in batches
   or update their local copy of BEHR files.
