@@ -25,6 +25,10 @@
 # simply modify them in the get_BEHR.sh script. Those defined as environmental variables
 # take precedence over those in the script.
 #
+# IMPORTANT: The ability of this script to determine the most recent file present on your
+# machine may fail if any un-hidden files other than BEHR files are present in the download
+# directory.
+#
 # Three additional options can be specified:
 #   -n, --no-ask: will turn off the interactive prompt asking you to confirm the download settings.
 #   -q, --quiet: will turn off all of the output to stdout.
@@ -32,6 +36,19 @@
 #
 # As a final note, the exit error codes are based off of those in /usr/include/sysexits.h, if you
 # wish to see the meaning of the numeric exit code for an error.
+#
+# Examples:
+#   ./get_BEHR.sh hdf 
+#       This first look at the directory specified in the envinromental variable BEHR_HDFDIR or the
+#       internal variable hdfdir (in that order) and see if any files are present. If the last file 
+#       is OMI_BEHR_vXXX_20160301.hdf, it will download all native pixel HDF files from 2016-03-02 
+#       on. If no files are present, it will download all available HDF files.
+#
+#   ./get_BEHR.sh gridded 20160501
+#       This will download all regridded files from 2016-05-01 on.
+#
+#   ./get_BEHR.sh txt 20060101 20061231
+#       This will download all native pixel size files for the year 2006.
 
 # The save directory can be specified here or in the .bashrc file on Linux systems
 # or .profile file on Macs. If given in the .bashrc or .profile files as environmental
