@@ -1,0 +1,30 @@
+To run get_BEHR.sh, you first need to make sure it is executable.
+In a Terminal (Mac OS, Linux) or Cygwin (Windows) window, navigate to
+the directory containing get_BEHR.sh and execute the command:
+
+chmod u+x get_BEHR.sh
+
+This will add execute permission for the owner of the file only (which
+should be you.)
+
+You can then run it with:
+
+./get_BEHR.sh
+
+if you are in the directory containing it. Running it with no arguments will
+print the help text which contains the most up-to-date instructions on using
+it to actually download data.
+
+Possible issues:
+1) get_BEHR.sh expects your bash executable to be at /bin/bash. If it is not,
+it won't run and you will get a "bad interpreter" error. This can be corrected
+in two ways:
+    (a) run it with the command
+            bash get_BEHR.sh
+        instead.
+
+    (b) Correct the first line of get_BEHR.sh that currently reads
+            #!/bin/bash
+        by replacing /bin/bash with the correct path to your bash executable.
+        This can be found with the command
+            which bash
