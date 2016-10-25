@@ -11,3 +11,7 @@ Current contact: Josh Laughner (jlaughner-AT-berkeley-DOT-edu)
 Tools included:
   get_BEHR.sh - a Bash script that can be run on a user's computer to download BEHR files in batches
   or update their local copy of BEHR files.
+
+  splitBEHR.py - a Python program that can split a day's BEHR file into separate files for each swath.
+  This should address some problems users have had with tools such as Panoply and possible NCL, which
+  seem to use the latitude and longitude arrays from the first swath for all swaths.
