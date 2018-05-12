@@ -1,0 +1,11 @@
+; DO NOT EDIT (unless you know what you are doing)
+;
+; This subdirectory is a git "subrepo", and this file is maintained by the
+; git-subrepo command. See https://github.com/git-commands/git-subrepo#readme
+;
+[subrepo]
+	remote = https://github.com/CohenBerkeleyLab/BEHRDownloader.git
+	branch = master
+	commit = 41d062ac32586b6bde3f347f5913d648c79b2482
+	parent = 3252fc6e16b88ed788aaa1a2a80f633117ec090a
+	cmdver = 0.3.1
