@@ -14,6 +14,9 @@ def parse_args():
     subparsers = parser.add_subparsers()
     parser_dash_cl = subparsers.add_parser('dash', help='Download monthly tar files from the official DASH archives; '
                                                         'call {} dash --help to see subcommand options'.format(os.path.basename(__file__)))
+
+    # This will add the options for the dash subparser. Doing it this way means that dash_interface may be a standalone
+    # program with the same arguments.
     dash_interface.parse_args(parser_dash_cl)
 
     args = parser.parse_args()
